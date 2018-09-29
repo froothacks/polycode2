@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/froothacks/polycode2#readme",
   "dependencies": {
-    "commander": "^2.18.0"
-  }, 
+    "commander": "^2.18.0",
+    "request": "^2.88.0"
+  },
   "devDependencies": {
     "eslint": "^5.6.1"
   }
