@@ -2,12 +2,18 @@ var request = require('request');
 var fs = require('fs');
 var path = require('path'); 
 
-function translateText(sourceText, sourceLang, targetLang) {
+function translateToken(token, index, sourceLang, targetLang) { {
+    var text = token.value;
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="
         + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
     return new Promise(function(resolve, reject) {
         request(url, function (error, response, body) {
-            resolve(JSON.parse(body)[0][0][0]);
+            resolve(
+                {
+                    "origValue": sourceText,
+                    "index", index,
+                    "translated": JSON.parse(body)[0][0][0])
+                }
             // TODO: Error handling
         });
     });
