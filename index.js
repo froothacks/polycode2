@@ -11,4 +11,12 @@ program
 		dictionary.define(word, translation, options)
 	})
 
+program
+	.command('definition <word>')
+	.description('Translate a word from the original language to the user language.')
+	.option('-r, --reverse', 'Gives you the word in the original language from the user language.')
+	.action(function (word, options) {
+		dictionary.definition(word, translation, options)
+	})
+
 program.parse(process.argv)
