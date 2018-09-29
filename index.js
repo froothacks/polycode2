@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 const program = require('commander');
 
+
 program
-  .arguments('test')
-  .option('-b, --banana <banana>', 'A banana')
-  .action(function(test) {
-    console.log('Hi! Your banana is %s test thing: %s',
-        program.banana, test);
+  .arguments('command')
+  // .option('-b, --banana <banana>', 'A banana') would be accessed by program.banana
+  .action(command => {
+    console.log(`Hi <3 ! The command was ${command}`);
   })
   .parse(process.argv);
