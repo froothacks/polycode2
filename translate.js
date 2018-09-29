@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path'); 
 
 function translateToken(token, index, sourceLang, targetLang) {
-    var text = token.value;
+    var sourceText = token.value;
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="
         + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
     return new Promise(function(resolve, reject) {
