@@ -7,5 +7,6 @@ function definition(word, options) {
 }
 
 module.exports = {
-   define
+   define,
+   definition
 }
