@@ -1,0 +1,25 @@
+{
+  "name": "polycode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "bananana": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/froothacks/polycode2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/froothacks/polycode2/issues"
+  },
+  "homepage": "https://github.com/froothacks/polycode2#readme",
+  "dependencies": {
+    "commander": "^2.18.0"
+  }
+}
