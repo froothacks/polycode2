@@ -2,7 +2,7 @@ var request = require('request');
 var fs = require('fs');
 var path = require('path'); 
 
-function translateToken(token, index, sourceLang, targetLang) { {
+function translateToken(token, index, sourceLang, targetLang) {
     var text = token.value;
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="
         + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
@@ -11,9 +11,9 @@ function translateToken(token, index, sourceLang, targetLang) { {
             resolve(
                 {
                     "origValue": sourceText,
-                    "index", index,
-                    "translated": JSON.parse(body)[0][0][0])
-                }
+                    "index": index,
+                    "translated": JSON.parse(body)[0][0][0]
+                });
             // TODO: Error handling
         });
     });
@@ -63,5 +63,5 @@ function translate_all(config, DEST_LANG, additional_ignores=[]) {
 }
 
 module.exports = {
-   test() {console.log("this is the test function for you david")}, translateText
+   test() {console.log("this is the test function for you david")}, translateToken
 }
