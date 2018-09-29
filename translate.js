@@ -34,7 +34,7 @@ function translate_file(config, target_file, SOURCE_LANG, DEST_LANG) {
 	let fextension = path.extname(target_file);
 
 	payload = {'doc': source, 'from': SOURCE_LANG,
-		        'to': DEST_LANG, 'map': JSON.stringify(map), 'ext':fextension}
+		'to': DEST_LANG, 'map': JSON.stringify(map), 'ext':fextension}
 
 	//TODO: Make some sort of request to the translation server
 	// Assume translated is the translated text and translation_map

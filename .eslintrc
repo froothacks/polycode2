@@ -2,12 +2,13 @@
   "extends": [ "eslint:recommended" ],
   "env": {
     "node": true,
-    "browser": true
+    "browser": true,
+    "es6": true
   },
   "parserOptions": {
       "ecmaVersion": 6
   }, 
   "rules": {
-  	"no-console": [0, { allow: ["warn", "error"] }] 
+  	"no-console": [0, { "allow": ["warn", "error"] }] 
   }
 }
