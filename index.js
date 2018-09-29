@@ -1,6 +1,14 @@
 #!/usr/bin/env node
 const program = require('commander');
 
+const TRANSLATE_CONFIG_FILENAME = '.polycode'
+const TRANSLATE_IGNORE_FILENAME = '.polycodeignore'
+const TRANSLATE_TEMP_FILENAME = '.polycodetmp'
+const TRANSLATE_PERSONAL_CONFIG_FILEPATH = '~/.polycode'
+
+const TRANSLATED_FILES_PATH_TEMPLATE = 'repo-{}/'
+const TRANSLATE_DICT_FILES_PATH = '.polycodedata/'
+
 program
   .arguments('test')
   .option('-b, --banana <banana>', 'A banana')
