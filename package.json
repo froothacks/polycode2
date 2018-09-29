@@ -21,6 +21,7 @@
   "homepage": "https://github.com/froothacks/polycode2#readme",
   "dependencies": {
     "commander": "^2.18.0",
+    "fs": "0.0.1-security",
     "request": "^2.88.0"
   },
   "devDependencies": {
