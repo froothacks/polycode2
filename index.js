@@ -11,5 +11,4 @@ program
 		dictionary.define(word, translation, options)
 	})
 
-
 program.parse(process.argv)
