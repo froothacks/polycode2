@@ -1,5 +1,4 @@
-const Case = require('case');
-const translator = require('./translate.js')
+const translateToken = require('./translate_token.js')
 /**
  * @param {array} tokens
  * @param {string} from
@@ -46,7 +45,7 @@ module.exports = async (tokens, from, to, map) => {
             }
         });
         if (!inDict) {
-            allPromises.push(translator.translateToken(tokens[i], i, from, to));
+            allPromises.push(translateToken(tokens[i], i, from, to));
         }
     }
     var results = await Promise.all(allPromises);

@@ -1,23 +1,5 @@
-var request = require('request');
-var fs = require('fs');
-var path = require('path'); 
-
-function translateToken(token, index, sourceLang, targetLang) {
-    var sourceText = token.value;
-    var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="
-        + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
-    return new Promise(function(resolve, reject) {
-        request(url, function (error, response, body) {
-            resolve(
-                {
-                    "origValue": sourceText,
-                    "index": index,
-                    "translated": JSON.parse(body)[0][0][0]
-                });
-            // TODO: Error handling
-        });
-    });
-}
+const fs = require('fs');
+const path = require('path'); 
 
 function translate_file(config, target_file, SOURCE_LANG, DEST_LANG) {
     // Load file from disk
@@ -63,5 +45,5 @@ function translate_all(config, DEST_LANG, additional_ignores=[]) {
 }
 
 module.exports = {
-   test() {console.log("this is the test function for you david")}, translateToken
+    test() {console.log("this is the test function for you david")}
 }
