@@ -14,6 +14,7 @@ function translateToken(token, index, sourceLang, targetLang) { {
                     "index", index,
                     "translated": JSON.parse(body)[0][0][0])
                 }
+            )
             // TODO: Error handling
         });
     });

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const program = require('commander');
-const translator = require('./translate.js')
+// const translator = require('./translate.js')
 const dictionary = require('./dictionary.js')
     
 program
@@ -15,6 +15,14 @@ program
     .command('definition <word>')
     .description('Translate a word from the original language to the user language.')
     .option('-r, --reverse', 'Gives you the word in the original language from the user language.')
+    .action(function (word, options) {
+        dictionary.definition(word, options)
+    })
+
+program
+    .command('translate <file>')
+    .description('Translates a file into the user language.')
+    .option('-l, --language <language>', '.')
     .action(function (word, options) {
         dictionary.definition(word, options)
     })

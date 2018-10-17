@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/froothacks/polycode2#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
     "commander": "^2.18.0",
     "fs": "0.0.1-security",
     "request": "^2.88.0"
