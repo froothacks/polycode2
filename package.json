@@ -21,7 +21,11 @@
   "homepage": "https://github.com/froothacks/polycode2#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "acorn": "^6.0.2",
+    "acorn-jsx": "^5.0.0",
+    "case": "^1.5.5",
     "commander": "^2.18.0",
+    "filbert": "^0.1.20",
     "fs": "0.0.1-security",
     "request": "^2.88.0"
   },

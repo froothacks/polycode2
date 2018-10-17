@@ -64,5 +64,5 @@ function translate_all(config, DEST_LANG, additional_ignores=[]) {
 }
 
 module.exports = {
-   test() {console.log("this is the test function for you david")}, translateText
+    test() {console.log("this is the test function for you david")}
 }
